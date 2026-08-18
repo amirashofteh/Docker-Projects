@@ -1,9 +1,9 @@
 from flask import Flask 
-helloworld = Flask(__name__)
-@helloworld.route("/")
+app = Flask(__name__)
 
-def run():
-    return "{\"message\":\Hey there Python \"}"
+@app.route("/")
+def home():
+    return "Hello from Docker!!!"
 
 if __name__ == "__main__":
-    helloworld.run(host="0.0.0.0", port=int("3000"), debug=True)
+    app.run(debug=True, host="0.0.0.0", port=3000)
