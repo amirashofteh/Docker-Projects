@@ -1,6 +1,4 @@
-Yep 😄 — **one single `README.md`**, no separate pieces. Copy everything below into `README.md`:
 
-````markdown
 # PostgreSQL Inside Docker — Volume & Persistence
 
 A practical Docker project demonstrating how to run PostgreSQL inside a Docker container and persist database data using a Docker named volume.
