@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+  
+  app:
+    image: python:3.12-alpine
+    command: python -m http.server 8080
