@@ -1,0 +1,8 @@
+{
+  "name": "docker-multi-stage-build",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "mkdir -p dist && cp server.js dist/server.js",
+    "start": "node dist/server.js"
+  }
+}
