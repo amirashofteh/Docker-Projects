@@ -1,0 +1,45 @@
+services:
+  secure-app:
+
+    # BUILD
+    # Build our Docker image using the Dockerfile in this directory.
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # CONTAINER NAME
+    # Give the container a predictable name.
+    container_name: secure-app
+
+    # PORT
+    # Host port 3000 -> Container port 3000.
+    ports:
+      - "3000:3000"
+
+    # SECURITY #1 — READ-ONLY FILESYSTEM
+    # Prevent the application from modifying the container filesystem.
+    read_only: true
+
+    # SECURITY #2 — DROP LINUX CAPABILITIES
+    # Remove all Linux capabilities from the container.
+    cap_drop:
+      - ALL
+
+    # SECURITY #3 — NO NEW PRIVILEGES
+    # Prevent processes inside the container from gaining
+    # additional privileges.
+    security_opt:
+      - no-new-privileges:true
+
+    # SECURITY #4 — RESOURCE LIMITS
+    # Restrict how much CPU and RAM the container can consume.
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"      # Maximum 0.5 CPU
+          memory: 128M     # Maximum 128 MB RAM
+
+    # RESTART POLICY
+    # Restart automatically unless we intentionally stop it.
+    restart: unless-stopped
+
