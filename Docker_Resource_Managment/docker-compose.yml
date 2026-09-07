@@ -1,0 +1,25 @@
+services:
+  stress:
+    build:
+      context: ./stress
+    container_name: resource-stress
+
+    command:
+      - stress-ng
+      - --cpu
+      - "1"
+      - --vm
+      - "1"
+      - --vm-bytes
+      - 256M
+      - --vm-keep
+      - --timeout
+      - 300s
+
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+        reservations:
+          memory: 128M

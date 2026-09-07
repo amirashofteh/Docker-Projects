@@ -1,0 +1,11 @@
+{
+	"name": "Nodejswebapplication",
+	"version": "1.0.0",
+	"description": "A simple Node.js application",
+	"main": "Nodejswebapplication.js",
+	"dependencies": {},
+	"scripts": {
+	  "start": "node Nodejswebapplication.js"
+	}
+   }
+ 

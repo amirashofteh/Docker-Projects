@@ -1,0 +1,11 @@
+version: '3'
+services:
+  website:
+    image: nginx:latest
+    container_name: website
+    volumes:
+      - /home/helpdesk/Projects/Docker-Projects/Static-Website-DockerNginx/project1.html:/usr/share/nginx/html/project1.html
+    ports:
+      - 80:80
+    restart: always
+
