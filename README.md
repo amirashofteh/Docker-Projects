@@ -1,856 +1,275 @@
 # 🐳 Docker Projects
 
-A hands-on collection of Docker projects focused on building practical skills in **containerization, Docker Compose, networking, persistent storage, web applications, databases, reverse proxies, and monitoring**.
+A hands-on collection of Docker and Docker Compose projects focused on **containerization, networking, persistent storage, multi-service applications, reverse proxies, databases, healthchecks, and observability**.
 
-This repository is built as a practical learning portfolio: each project introduces a Docker concept and gradually increases in complexity, moving from individual containers to multi-service applications and monitoring stacks.
-
----
-
-## 🎯 Repository Goals
-
-The main goal of this repository is to develop practical Docker and DevOps skills through implementation rather than theory alone.
-
-The projects focus on:
-
-* Docker images and containers
-* Dockerfiles
-* Port mapping
-* Docker volumes
-* Docker networking
-* Docker Compose
-* Multi-container applications
-* Environment configuration
-* Nginx reverse proxies
-* Web applications
-* Database containers
-* Redis
-* PostgreSQL
-* MySQL
-* Prometheus
-* Grafana
-* Alertmanager
-* cAdvisor
-* Blackbox Exporter
-* Healthchecks
-* Service-to-service communication
+The repository documents my progression from individual containers toward more realistic multi-service DevOps environments.
 
 ---
 
-## 📂 Projects
+## 🚀 Projects
 
-|  # | Project                                                                   | Main Concepts                                     | Status |
-| -: | ------------------------------------------------------------------------- | ------------------------------------------------- | :----: |
-| 01 | [Static Website + Nginx](./Static-Website-DockerNginx)                    | Dockerfile, Nginx, Port Mapping                   |    ✅   |
-| 02 | [Python Flask App](./Python-Flask-App)                                    | Python, Flask, Dockerfile                         |    ✅   |
-| 03 | [Redis + Flask](./Redis-Flask-Docker)                                     | Multi-Container Apps, Networking, Redis           |    ✅   |
-| 04 | [PostgreSQL inside Docker](./PostgreSQL_inside_Docker)                    | PostgreSQL, Volumes, Persistence                  |    ✅   |
-| 05 | [Node.js Web Application](./Nodejs_Web_Application)                       | Node.js, Dockerfile, Application Containerization |    ✅   |
-| 06 | [Nginx Reverse Proxy](./Nginx_Reverse_Proxy)                              | Reverse Proxy, Networking                         |    ✅   |
-| 07 | [Prometheus + Grafana](./Grafana_Prometheus_Docker)                       | Prometheus, Grafana, Metrics                      |    ✅   |
-| 08 | [MySQL + phpMyAdmin](./MySQL_PHPmyAdmin_Docker)                           | MySQL, phpMyAdmin, Volumes, Compose               |    ✅   |
-| 09 | [Docker Healthcheck + Nginx](./Docker-Healthcheck-Nginx)                  | Healthchecks, Container Health                    |    ✅   |
-| 10 | [Prometheus + Grafana + Alertmanager](./Grafana_Prometheus_Alertmanager)  | Alerting, Prometheus, Grafana                     |    ✅   |
-| 11 | [Prometheus + Grafana + cAdvisor](./Docker_Grafana_cAdvisor_Prometheus)   | Container Monitoring, cAdvisor                    |    ✅   |
-| 12 | [Blackbox Exporter + Prometheus + Grafana](./Blackbox_Prometheus_Grafana) | External Monitoring, HTTP/HTTPS Probing           |    ✅   |
-| 13 | [Flask + PostgreSQL Multi-Service](./Flask_PostgreSQL_Docker)             | Compose, Networking, PostgreSQL, Healthchecks     |    ✅   |
+| # | Project | Main Concepts | Status |
+|---:|---|---|:---:|
+| 01 | [Static Website + Nginx](./Static-Website-DockerNginx) | Dockerfile, Nginx, Port Mapping | ✅ |
+| 02 | [Python Flask App](./Python-Flask-App) | Flask, Dockerfile, Application Containerization | ✅ |
+| 03 | [Redis + Flask](./Redis-Flask-Docker) | Multi-Container Apps, Networking, Redis | ✅ |
+| 04 | [PostgreSQL inside Docker](./PostgreSQL_inside_Docker) | PostgreSQL, Volumes, Persistence | ✅ |
+| 05 | [Node.js Web Application](./Nodejs_Web_Application) | Node.js, Dockerfile | ✅ |
+| 06 | [Nginx Reverse Proxy](./Nginx_Reverse_Proxy) | Reverse Proxy, Docker Networking | ✅ |
+| 07 | [Prometheus + Grafana](./Grafana_Prometheus_Docker) | Metrics, Monitoring, Visualization | ✅ |
+| 08 | [MySQL + phpMyAdmin](./MySQL_PHPmyAdmin_Docker) | MySQL, Volumes, Docker Compose | ✅ |
+| 09 | [Docker Healthcheck + Nginx](./Docker-Healthcheck-Nginx) | Healthchecks, Service Reliability | ✅ |
+| 10 | [Prometheus + Grafana + Alertmanager](./Grafana_Prometheus_Alertmanager) | Monitoring, Alerting | ✅ |
+| 11 | [Prometheus + Grafana + cAdvisor](./Docker_Grafana_cAdvisor_Prometheus) | Container Monitoring, Metrics | ✅ |
+| 12 | [Blackbox Exporter + Prometheus + Grafana](./Blackbox_Prometheus_Grafana) | Endpoint Monitoring, HTTP Probing | ✅ |
+| 13 | [Flask + PostgreSQL Multi-Service App](./Flask_PostgreSQL_Docker) | Compose, PostgreSQL, Networking, Healthchecks | ✅ |
 
-> More projects will be added as the repository progresses toward advanced Docker and DevOps topics.
+---
+
+## 🧠 What This Repository Demonstrates
+
+The projects cover practical experience with:
+
+- Building custom Docker images
+- Writing Dockerfiles
+- Container lifecycle management
+- Port mapping
+- Persistent volumes
+- Docker networking and internal DNS
+- Docker Compose
+- Multi-container application architectures
+- Reverse proxy configuration with Nginx
+- PostgreSQL, MySQL, and Redis containers
+- Environment-based configuration
+- Container healthchecks
+- Service dependencies
+- Metrics collection
+- Monitoring and alerting
+- Container and endpoint observability
 
 ---
 
 ## 🏗️ Learning Progression
 
-The projects are intentionally organized from fundamental Docker concepts toward more complex infrastructure:
-
 ```text
-Docker Basics
-      ↓
-Dockerfiles
-      ↓
-Images & Containers
-      ↓
-Port Mapping
-      ↓
-Volumes
-      ↓
+Docker Fundamentals
+        ↓
+Dockerfiles & Images
+        ↓
+Containers & Port Mapping
+        ↓
+Volumes & Persistence
+        ↓
 Docker Networking
-      ↓
+        ↓
 Docker Compose
-      ↓
-Multi-Container Applications
-      ↓
-Nginx Reverse Proxy
-      ↓
-Databases & Persistence
-      ↓
+        ↓
+Multi-Service Applications
+        ↓
+Reverse Proxies
+        ↓
+Databases
+        ↓
 Healthchecks
-      ↓
-Prometheus & Grafana
-      ↓
+        ↓
+Monitoring & Metrics
+        ↓
 Alerting
-      ↓
-Container Monitoring
-      ↓
-External Service Monitoring
-      ↓
-Advanced Docker
-      ↓
-CI/CD
-      ↓
-Infrastructure & DevOps
+        ↓
+Container Observability
+        ↓
+Production-Oriented Containers
 ```
 
 ---
 
-# 🐳 Docker Fundamentals
+## 🛠️ Technologies
 
-## Images
+### Containers
+- Docker
+- Docker Compose
+- Dockerfiles
 
-Docker images provide the templates used to create containers.
+### Applications & Infrastructure
+- Nginx
+- Python
+- Flask
+- Node.js
 
-Example:
+### Data Services
+- PostgreSQL
+- MySQL
+- Redis
+- phpMyAdmin
 
-```bash
-docker build -t my-app .
+### Monitoring & Observability
+- Prometheus
+- Grafana
+- Alertmanager
+- Node Exporter
+- cAdvisor
+- Blackbox Exporter
+
+### Environment
+- Linux
+- Git
+- GitHub
+
+---
+
+## 🧩 Example Architecture
+
+Several projects move beyond isolated containers and use multi-service architectures such as:
+
+```text
+             Client
+               │
+               ▼
+             Nginx
+               │
+               ▼
+          Application
+           │       │
+           ▼       ▼
+      PostgreSQL  Redis
 ```
 
-Useful commands:
+Monitoring projects introduce architectures such as:
 
-```bash
-docker images
-docker image ls
+```text
+Application / Container / Endpoint
+                │
+                ▼
+        Exporter / Metrics
+                │
+                ▼
+           Prometheus
+                │
+         ┌──────┴──────┐
+         ▼             ▼
+      Grafana      Alertmanager
 ```
 
 ---
 
-## Containers
+## 🔍 Engineering Approach
 
-Containers run applications in isolated environments.
+For each project, I aim to follow a practical workflow:
 
-Example:
-
-```bash
-docker run -d -p 8080:80 my-app
-```
-
-Useful commands:
-
-```bash
-docker ps
-docker ps -a
-docker logs container-name
-docker exec -it container-name /bin/sh
+```text
+Understand the requirement
+        ↓
+Design the container architecture
+        ↓
+Write Dockerfile / Compose configuration
+        ↓
+Build and start the environment
+        ↓
+Verify networking and service communication
+        ↓
+Test persistence and health
+        ↓
+Inspect logs and troubleshoot failures
+        ↓
+Document the implementation
 ```
 
 ---
 
-## Dockerfiles
+## 📌 Featured Areas
 
-Projects in this repository use Dockerfiles to define reproducible application environments.
+### Multi-Service Applications
 
-Common Dockerfile instructions practiced include:
+Projects demonstrate application-to-service communication using Docker's internal networking and service discovery.
 
-```text
-FROM
-WORKDIR
-COPY
-RUN
-EXPOSE
-CMD
-ENTRYPOINT
-```
-
-Example:
-
-```dockerfile
-FROM python:3.12-slim
-
-WORKDIR /app
-
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY app.py .
-
-EXPOSE 5000
-
-CMD ["python", "app.py"]
-```
-
----
-
-# 🔌 Port Mapping
-
-Docker port mapping connects container services to the host machine.
+Examples include:
 
 ```text
-Host Port → Container Port
-```
-
-Example:
-
-```text
-localhost:8080 → container:80
-```
-
-Compose example:
-
-```yaml
-ports:
-  - "8080:80"
-```
-
-Port mapping is used throughout the projects to expose web applications, Grafana, Prometheus, and other services.
-
----
-
-# 💾 Docker Volumes
-
-Docker volumes provide persistent storage independently of a container's lifecycle.
-
-Example:
-
-```yaml
-volumes:
-  - postgres_data:/var/lib/postgresql/data
-```
-
-This allows database data to survive container recreation.
-
-The database projects use volumes to demonstrate the difference between:
-
-```text
-Container
-    ≠
-Persistent Data
-```
-
----
-
-# 🌐 Docker Networking
-
-Docker containers can communicate through Docker networks.
-
-With Docker Compose, services can communicate using their service names.
-
-Example:
-
-```text
-Flask
-  │
-  │ postgres:5432
-  ▼
-PostgreSQL
-```
-
-Inside the Flask container:
-
-```text
-postgres
-```
-
-resolves to the PostgreSQL service through Docker's internal DNS.
-
-This approach avoids relying on hard-coded container IP addresses.
-
----
-
-# 🧩 Docker Compose
-
-Docker Compose allows multiple related services to be defined and operated together.
-
-Example:
-
-```bash
-docker compose up -d
-```
-
-Stop the services:
-
-```bash
-docker compose down
-```
-
-View service status:
-
-```bash
-docker compose ps
-```
-
-View logs:
-
-```bash
-docker compose logs
-```
-
-Follow logs:
-
-```bash
-docker compose logs -f
-```
-
-The Compose projects in this repository demonstrate multi-service architectures such as:
-
-```text
-Flask
-  ↓
-Redis
-```
-
-```text
-Flask
-  ↓
-PostgreSQL
-```
-
-```text
-Nginx
-  ↓
-Application
+Flask → Redis
 ```
 
 and:
 
 ```text
-Exporter
-  ↓
-Prometheus
-  ↓
-Grafana
+Flask → PostgreSQL
 ```
 
 ---
 
-# 🔀 Multi-Container Applications
+### Persistent Storage
 
-Several projects use multiple containers working together as independent services.
-
-A typical architecture is:
+Database projects use Docker volumes to ensure data survives container recreation.
 
 ```text
-                    Client
-                       │
-                       ▼
-                    Nginx
-                       │
-                       ▼
-                  Application
-                    │     │
-                    ▼     ▼
-               PostgreSQL Redis
+Container Lifecycle
+        ≠
+Persistent Data Lifecycle
 ```
-
-Each service has its own responsibility while Docker networking allows them to communicate.
-
-This approach introduces practical experience with:
-
-* Service discovery
-* Internal DNS
-* Container networking
-* Service dependencies
-* Database connections
-* Application/database separation
 
 ---
 
-# 🌐 Nginx Reverse Proxy
+### Reverse Proxying
 
-The Nginx reverse proxy project demonstrates how Nginx can sit in front of an application:
+The Nginx reverse proxy project demonstrates traffic routing between clients and containerized applications.
 
 ```text
 Client
-   │
-   ▼
+   ↓
  Nginx
-   │
-   ▼
+   ↓
 Application
 ```
 
-The project provides hands-on experience with:
+---
 
-* Reverse proxy configuration
-* Docker networking
-* Nginx configuration files
-* Internal service communication
+### Healthchecks
 
-Nginx configuration is managed through:
-
-```text
-/etc/nginx/conf.d/
-```
+Healthcheck projects verify whether a containerized service is actually operational rather than merely running.
 
 ---
 
-# 🗄️ Database Containers
+### Monitoring & Observability
 
-The repository includes multiple database-based projects.
-
-### PostgreSQL
+Monitoring projects progressively introduce:
 
 ```text
-PostgreSQL
-    │
-    ▼
-Docker Volume
-```
-
-The PostgreSQL project focuses on:
-
-* Database containerization
-* Persistent storage
-* Initialization scripts
-* Setup and cleanup automation
-* Persistence testing
-
-### MySQL + phpMyAdmin
-
-```text
-phpMyAdmin
-      │
-      ▼
-    MySQL
-      │
-      ▼
- Docker Volume
-```
-
-This project introduces database administration through a containerized environment.
-
----
-
-# ❤️ Container Healthchecks
-
-The healthcheck project demonstrates how Docker can determine whether a service is actually healthy.
-
-Example:
-
-```yaml
-healthcheck:
-  test: ["CMD", "curl", "-f", "http://localhost"]
-  interval: 30s
-  timeout: 10s
-  retries: 3
-```
-
-Healthchecks are useful for:
-
-* Detecting service failures
-* Monitoring application availability
-* Coordinating dependent services
-* Building more reliable Compose environments
-
----
-
-# 📊 Monitoring
-
-The repository contains several monitoring projects built around the Prometheus ecosystem.
-
-## Prometheus + Grafana
-
-```text
-Node Exporter
-      │
-      ▼
+Metrics
+   ↓
 Prometheus
-      │
-      ▼
+   ↓
 Grafana
-```
-
-### Prometheus
-
-Prometheus collects and stores time-series metrics.
-
-### Grafana
-
-Grafana visualizes metrics through dashboards.
-
-### Node Exporter
-
-Node Exporter provides system-level metrics that can be collected by Prometheus.
-
----
-
-# 🚨 Alertmanager
-
-The Alertmanager project extends the Prometheus monitoring stack with alerting.
-
-```text
-Target
-  │
-  ▼
-Prometheus
-  │
-  ▼
-Alert Rules
-  │
-  ▼
-Alertmanager
-```
-
-This introduces concepts such as:
-
-* Prometheus alert rules
-* Alert routing
-* Alert handling
-* Monitoring failures
-
----
-
-# 📦 cAdvisor Monitoring
-
-cAdvisor provides container-level metrics.
-
-Architecture:
-
-```text
-Docker Containers
-       │
-       ▼
-    cAdvisor
-       │
-       ▼
-   Prometheus
-       │
-       ▼
-    Grafana
-```
-
-This allows container resource usage and performance to be monitored through Prometheus and Grafana.
-
----
-
-# 🌍 Blackbox Monitoring
-
-The Blackbox project introduces external service monitoring.
-
-Architecture:
-
-```text
-Target Website
-      │
-      ▼
-Blackbox Exporter
-      │
-      ▼
-Prometheus
-      │
-      ▼
-Grafana
-```
-
-Blackbox Exporter can be used to probe endpoints and expose metrics such as:
-
-* Probe success
-* HTTP status codes
-* Probe duration
-* DNS timing
-* TLS timing
-* SSL certificate information
-
-This differs from Node Exporter and cAdvisor because the focus is on **service availability and reachability** rather than host or container resource metrics.
-
----
-
-# 🔗 Flask + PostgreSQL Multi-Service Application
-
-The Flask + PostgreSQL project demonstrates a complete multi-container application:
-
-```text
-Client
-  │
-  ▼
-Flask
-  │
-  │ postgres:5432
-  ▼
-PostgreSQL
-```
-
-The project demonstrates:
-
-* Flask application containerization
-* PostgreSQL containerization
-* Docker Compose
-* Internal Docker networking
-* Environment variables
-* Healthchecks
-* Service dependencies
-* Persistent database storage
-* Container-to-container communication
-
----
-
-# 🛠️ Technologies
-
-The technologies currently used in this repository include:
-
-* Docker
-* Docker Compose
-* Dockerfiles
-* Linux
-* Git
-* GitHub
-* Nginx
-* Python
-* Flask
-* Node.js
-* Redis
-* PostgreSQL
-* MySQL
-* phpMyAdmin
-* Prometheus
-* Grafana
-* Node Exporter
-* cAdvisor
-* Alertmanager
-* Blackbox Exporter
-
----
-
-# 🚀 Common Docker Commands
-
-Check Docker:
-
-```bash
-docker --version
-```
-
-List running containers:
-
-```bash
-docker ps
-```
-
-List all containers:
-
-```bash
-docker ps -a
-```
-
-List images:
-
-```bash
-docker images
-```
-
-Build an image:
-
-```bash
-docker build -t image-name .
-```
-
-Run a container:
-
-```bash
-docker run -d image-name
-```
-
-View container logs:
-
-```bash
-docker logs container-name
-```
-
-Open a shell inside a container:
-
-```bash
-docker exec -it container-name /bin/sh
-```
-
-Stop a container:
-
-```bash
-docker stop container-name
-```
-
-Remove a container:
-
-```bash
-docker rm container-name
+   ↓
+Alerting
+   ↓
+Container Monitoring
+   ↓
+Endpoint Monitoring
 ```
 
 ---
 
-# 🐳 Common Docker Compose Commands
+## 🔮 Next Steps
 
-Start services:
+Future Docker projects will focus on:
 
-```bash
-docker compose up -d
-```
-
-Build and start services:
-
-```bash
-docker compose up -d --build
-```
-
-View services:
-
-```bash
-docker compose ps
-```
-
-View logs:
-
-```bash
-docker compose logs
-```
-
-Follow logs:
-
-```bash
-docker compose logs -f
-```
-
-Stop services:
-
-```bash
-docker compose stop
-```
-
-Stop and remove containers:
-
-```bash
-docker compose down
-```
-
-Stop and remove containers and volumes:
-
-```bash
-docker compose down -v
-```
-
-> Be careful with `docker compose down -v` when databases are involved because removing volumes can delete persistent database data.
-
----
-
-# 📚 What I Am Learning
-
-Through these projects, I am developing practical experience with:
-
-* Containerization
-* Application deployment
-* Docker image creation
-* Docker networking
-* Persistent storage
-* Multi-container architectures
-* Database deployment
-* Reverse proxies
-* Service health monitoring
-* Infrastructure monitoring
-* Metrics collection
-* Alerting
-* Git and GitHub workflows
-* DevOps practices
-
-The goal is to progress from individual Docker containers toward **production-style containerized infrastructure, automation, monitoring, and CI/CD**.
-
----
-
-# 🔮 Next Steps
-
-The repository will continue moving toward more advanced Docker and DevOps topics.
-
-Planned areas include:
-
-```text
-Docker Reliability
-       ↓
-Resource Management
-       ↓
-Image Optimization
-       ↓
-Multi-Stage Builds
-       ↓
-Container Security
-       ↓
-Secrets Management
-       ↓
-Docker CI/CD
-       ↓
-Container Registry
-       ↓
-Advanced Monitoring
-       ↓
-Docker Swarm
-       ↓
-Kubernetes
-```
-
-Potential future projects include:
-
-* Container auto-recovery
-* Restart policies
-* Resource limits
-* Logging and log rotation
-* Multi-stage Docker builds
-* Image size optimization
-* Non-root containers
-* Docker secrets
-* Container security hardening
-* Docker image scanning
-* GitHub Actions
-* Automated Docker builds
-* Container registry workflows
-* Production-style Compose deployments
-* Advanced Prometheus monitoring
-* Kubernetes deployments
-
----
-
-# 📈 Repository Philosophy
-
-The purpose of this repository is not simply to collect Docker examples.
-
-Each project is intended to answer a practical question:
-
-```text
-How does Docker work?
-        ↓
-How do containers communicate?
-        ↓
-How do I persist data?
-        ↓
-How do I deploy multiple services?
-        ↓
-How do I monitor them?
-        ↓
-How do I detect failures?
-        ↓
-How do I secure them?
-        ↓
-How do I automate them?
-        ↓
-How do I operate them in production?
-```
-
-Each project is documented separately with its own README, configuration, architecture, and usage instructions.
+- Resource limits and container reliability
+- Restart policies
+- Multi-stage builds
+- Image optimization
+- Non-root containers
+- Container security hardening
+- Secrets management
+- Image scanning
+- GitHub Actions
+- Automated Docker builds
+- Container registries
+- CI/CD workflows
+- Production-style Compose deployments
 
 ---
 
 ## 📌 Repository Status
 
-**Active learning and development repository**
+🟢 **Actively maintained**
 
-Projects are continuously added and improved as I progress through Docker, monitoring, automation, and DevOps topics.
-
----
-
-## 👨‍💻 Author
-
-**Amir Ashofteh**
-
-Hands-on learning portfolio focused on:
-
-```text
-Linux
-Docker
-Networking
-Monitoring
-Automation
-DevOps
-```
+This repository is part of my hands-on DevOps portfolio and continues to evolve as I move toward more advanced container automation, CI/CD, infrastructure, and cloud-native technologies.
